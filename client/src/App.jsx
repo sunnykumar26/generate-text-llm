@@ -66,7 +66,7 @@ function App() {
   const handleChatRequest = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:3001/api/chat', { prompt });
+      const response = await axios.post('https://generate-text-llm.onrender.com/api/chat', { prompt });
       setResponse(response.data.text);
     } catch (error) {
       console.error('Error fetching chat response:', error);
